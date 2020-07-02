@@ -1,3 +1,7 @@
+#################
+### VARIABLES ###
+#################
+
 #liste permettant de tester le script sans le lancer depuis une instance EC2
 testLists = [
     [{'Key': 'ID', 'Value': 'i-0d65c8ece8816e4f1'}, {'Key': 'Name', 'Value': 'Instance validation réseau dns'}, {'Key': 'Owner', 'Value': 'nquantin'}],

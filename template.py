@@ -1,4 +1,7 @@
-#template
+################
+### TEMPLATE ###
+################
+
 #Clé : nom du tag
 #Valeur : norme ou liste de tag
 tagTemplate = {
