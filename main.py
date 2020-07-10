@@ -3,10 +3,10 @@ import argparse
 
 from variables import * 
 from template import *
-from fonctions import *
+from classes import *
 
 ############
-### MAIN ###
+### MAIN ### test
 ############
 
 parser = argparse.ArgumentParser()
@@ -15,9 +15,7 @@ parser.add_argument("-c", "--csv", action="store_true", help="permet de créer u
 args = parser.parse_args()
 
 if not args.hidetab:
-    displayHeader(tagTemplate)
-    displayTab(convertLists(testLists), tagTemplate)
+    newTab = TabDisplay(convertLists(testLists), tagTemplate)
 
 if args.csv:
-    displayHeaderCS(tagTemplate)
-    displayTabCS(convertLists(testLists), tagTemplate)
+    newCSV = CreateCSVFile(convertLists(testLists), tagTemplate)
