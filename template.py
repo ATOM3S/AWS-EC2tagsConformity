@@ -7,6 +7,6 @@
 tagTemplate = {
     'ID':"/",
     'Name': r"^[a-z0-9]+",
-    'Departement': r"^[a-z0-9]+",
+    'Departement': ["cloud", "secc"],
     'Application': r"^[a-z0-9]+"
 }

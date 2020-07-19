@@ -1,6 +1,15 @@
 import re
+
+from time import strftime
+from datetime import datetime
+
 from variables import * 
 from template import *
+
+# Nom
+# Petite description
+# Mail
+# Licence
 
 ###############
 ### CLASSES ###
@@ -16,13 +25,22 @@ class TabDisplay:
     
     @staticmethod  
     def tagControler(tags, key, template):
-        """Fonction permettant de controler si un tag correspond à une norme donnée"""
-        if not(key in tags):
-            return "---"
-        elif re.search(template[key], tags[key]) is None:
-            return tags[key]
+        """Fonction permettant de controler si un tag correspond à une norme donnée
+        ou si il est conforme à une liste"""
+        if type(template[key]) == list:
+            if not(key in tags):
+                return "---"
+            elif tags[key] in template[key]:
+                return "+++"
+            else:
+                return tags[key]
         else:
-            return "+++"
+            if not(key in tags):
+                return "---"
+            elif re.search(template[key], tags[key]) is None:
+                return tags[key]
+            else:
+                return "+++"
 
     @staticmethod
     def displayHeader(template):
@@ -53,39 +71,36 @@ class TabDisplay:
             self.displayRow(tagList)
 
 
-#Classe gérant la création d'un fichier CSV (Comma-Separated Values=
-class CreateCSVFile:
+
+#Classe gérant la création d'un fichier CSV (Comma-Separated Values)
+class CreateCSVFile(TabDisplay):
 
     def __init__(self, tagsList, tagsTemplate):
-        """Initialisation de la classe"""
-        displayHeaderCS(tagTemplate)
-        displayTabCS(convertLists(testLists), tagTemplate)
+        time = datetime.now().strftime("%m%d%Y%H%M%S")
+        fileName = time + '.cvs'
+        self.file = open(fileName, "a")
+        
+        TabDisplay.__init__(self, tagsList, tagsTemplate)
+
+        self.file.close()
     
-    def displayHeaderCS(template):
+    def displayHeader(self, template):
         """Fonction qui permet d'afficher l'entête d'un tableau.
         Prend en paramètre un dictionnaire et en affiche les clés dans une ligne"""
         row = ''
         for key in template.keys():
             row = row + key + ','
-        print(row)
-        print('')
-
-    def displayRowCS(liste):
+        self.file.write(row)
+        self.file.write('\n')
+    
+    def displayRow(self, liste):
         """Fonction qui permet l'affichage d'une ligne.
         Prend en paramètre un dictionnaire et en affiche les valeurs dans une ligne"""
         row = ''
         for elt in liste:
             row = row + elt + ','
-        print(row)
-
-    def displayTabCS(liste, template):
-        """Fonction qui permet d'afficher les lignes d'un tableau. Prend en paramètre une liste de dictionnaire et
-        fait appelle à la fonciton displayRow pour en afficher les clés (une ligne par dictionnaire)"""
-        for elt in liste:
-            tagList = []
-            for key in template.keys():
-                tagList.append(tagControler(elt, key, template))
-            displayRowCS(tagList)
+        self.file.write(row)
+        self.file.write('\n')
 
 
 #################
