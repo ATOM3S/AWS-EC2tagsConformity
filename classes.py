@@ -1,3 +1,5 @@
+# -*- coding: ISO-8859-1 -*-
+
 import re
 
 from time import strftime
