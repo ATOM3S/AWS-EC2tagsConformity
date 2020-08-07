@@ -38,9 +38,24 @@ Fichier principale. Il va lancer la ou les classes en fonction des paramètres s
 
 ### classe.py
 
-C'est ici que sont
+C'est ici que sont regroupé les classes qui servent au fonctionnement du script. 
+Elles sont au nombre de deux :
+TabDisplay - Permet la création et l'affichage du tableau de conformité des tags
+CreateCSVFile - Permet de créer et sauvegarder un fichier csv avec les mêmes informations que contenu dans le tableau.
 
 ### variables.py
 
+C'est ici que sont et doivent être stocké les variables. 
+En cas de création de nouvelles variables, elles doivent être stocké dans ce fichier. 
+Cela permet de regrouper au même endroit les variables qu'il pourrait être intéressant de modifier. 
+
 ### template.py
 
+C'est dans le template qu'il faut renseigner les tags que le tableau va afficher, et leur norme.
+Le template est un dictionnaire python clé/valeur. 
+
+En clé, il faut rentrer le nom du tag qui sera recherché. Attention, le nom du tag est sensible à la case. Pour le script "name" et "Name" sont deux tags différents.
+
+En valeur, deux choix sont possible :
+-entrer une norme à l'aide d'une expression régulière. 
+-entrer une liste de valeur. 
