@@ -24,9 +24,6 @@ for instance in ec2.instances.all():
     addId = {'Key': 'ID', 'Value': instance.id}
     instanceTagsList.append(addId)
     tagsList.append(instanceTagsList)
-        
-# displayHeader(tagTemplate)
-# displayTab(convertLists(tagsList), tagTemplate)
 
 if not args.hidetab:
     newTab = TabDisplay(convertLists(tagsList), tagTemplate)
