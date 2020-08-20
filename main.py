@@ -7,7 +7,7 @@ from template import *
 from classes import *
 
 ############
-### MAIN ### test
+### MAIN ###
 ############
 
 parser = argparse.ArgumentParser()
