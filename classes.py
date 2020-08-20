@@ -9,10 +9,9 @@ from collections import OrderedDict
 from variables import * 
 from template import *
 
-# Nom
-# Petite description
-# Mail
-# Licence
+# Delaunay Jonas
+# https://github.com/ATOM3S/AWS-EC2tagsConformity
+# Licence MIT
 
 ###############
 ### CLASSES ###
