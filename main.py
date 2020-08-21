@@ -6,10 +6,6 @@ from variables import *
 from template import *
 from classes import *
 
-# Delaunay Jonas
-# https://github.com/ATOM3S/AWS-EC2tagsConformity
-# Licence MIT
-
 ############
 ### MAIN ###
 ############
