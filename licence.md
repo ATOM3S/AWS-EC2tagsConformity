@@ -1,3 +1,7 @@
+Delaunay Jonas \<contact@jonasdelaunay.com\>  
+https://github.com/ATOM3S/AWS-EC2tagsConformity  
+Licence MIT  
+
 Copyright 2020 Delaunay
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
