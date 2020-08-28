@@ -15,7 +15,7 @@ parser.add_argument("-ht", "--hidetab", action="store_true", help="permet de mas
 parser.add_argument("-c", "--csv", action="store_true", help="permet de creer un fichier csv")
 args = parser.parse_args()
 
-ec2 = boto3.resource('ec2', 'eu-west-3')
+ec2 = boto3.resource('ec2', region)
 
 tagsList = []
 
