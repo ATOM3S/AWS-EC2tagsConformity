@@ -23,7 +23,7 @@ L'instance EC2 doit disposer des droits nécessaires à l'aide d'IAM. Plus d'inf
 Pour lancer le script, appelez simplement "main.py" suivit si besoin des commandes.
 
 Exemple :  
-python3 main.py -ht -c 
+> python3 main.py -ht -c 
 
 ## Commandes
 
