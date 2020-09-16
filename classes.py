@@ -78,8 +78,9 @@ class TabDisplay:
 class CreateCSVFile(TabDisplay):
 
     def __init__(self, tagsList, tagsTemplate):
+        """Constructeur de la classe"""
         time = datetime.now().strftime("%m%d%Y%H%M%S")
-        fileName = time + '.cvs'
+        fileName = time + '.csv'
         self.file = open(fileName, "a")
         
         TabDisplay.__init__(self, tagsList, tagsTemplate)
