@@ -9,7 +9,7 @@ from collections import OrderedDict
 from variables import * 
 from template import *
 
-# Delaunay Jonas
+# Delaunay Jonas <contact@jonasdelaunay.com>
 # https://github.com/ATOM3S/AWS-EC2tagsConformity
 # Licence MIT
 
